@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding='UTF-8'?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="project_reminder_form">
+            <field name="name">Projectproject</field>
+            <field name="model">project.project</field>
+            <field name="inherit_id" ref="project.edit_project"/>
+            <field name="arch" type="xml">
+                <field name="partner_id" position="after">
+                    <field name="project_task_reminder"/>
+                    <field name="project_interval_duration"
+                           attrs="{'invisible': [('project_task_reminder','=',False)]}"/>
+                </field>
+            </field>
+        </record>
+    </data>
+</odoo>

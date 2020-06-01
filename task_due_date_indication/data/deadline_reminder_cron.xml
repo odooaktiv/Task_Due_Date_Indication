@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding='UTF-8'?>
+<odoo>
+
+    <record id="ir_cron_project_task_due_indication" model="ir.cron">
+        <field name="name">Task Due Date Indication</field>
+        <field name="model_id" ref="project.model_project_task"/>
+        <field name="user_id" ref="base.user_root" />
+        <field name="interval_number">1</field>
+        <field name="interval_type">days</field>
+        <field name="numbercall">-1</field>
+        <field name="doall" eval="False"/>
+        <field name="state">code</field>
+        <field name="code">model._project_task_reminderby_email()</field>
+    </record>
+
+</odoo>
+
+
